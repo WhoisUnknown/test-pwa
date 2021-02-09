@@ -1,14 +1,14 @@
 import defaultConfig from 'assets/themes/default.json';
-import { merge } from 'lodash-es';
+import { merge, cloneDeep } from 'lodash-es';
 
 export default ({ app, $cookies }, inject) => {
   // получаем конфиг исходя из того, что выбрал пользователь(в дальнейшем можно будет брать конфиг по api)
   const theme = $cookies.get('theme') || 'default';
-  let resultConfig = defaultConfig;
+  let resultConfig = cloneDeep(defaultConfig);
   if (theme !== 'default') {
     try {
       const config = require('assets/themes/' + theme + '.json');
-      resultConfig = config ? merge(defaultConfig, config) : defaultConfig;
+      resultConfig = config ? merge(cloneDeep(defaultConfig), cloneDeep(config)) : defaultConfig;
     } catch (e) {
       $cookies.set('theme', 'default', {
         path: '/',

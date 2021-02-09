@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="`${$themeConfig.name}--theme`">
     <div>
       <nuxt-link
         class="reset-link"

@@ -1,5 +1,5 @@
 <template>
-  <div fluid>
+  <div :class="`${$themeConfig.name}--theme`">
     <h1
       v-if="codeTitle[error.statusCode]"
       class="mt-0">

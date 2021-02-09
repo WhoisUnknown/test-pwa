@@ -1,4 +1,5 @@
 {
+  "name":"default",
   "cssVars":{
     "body-color": "#555",
     "background-color": "#fff"

@@ -1,4 +1,5 @@
 {
+  "name":"yandex",
   "cssVars":{
     "body-color": "#000",
     "background-color": "yellow"
