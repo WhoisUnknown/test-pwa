@@ -1,0 +1,1 @@
+Folder for pictures used in the code or processing at compilation. For example icons to be converted to icon font

@@ -1,0 +1,1 @@
+Folder for various helpers / reusable functions, for example, the function of bringing prices (order amount, product price) to a common format
