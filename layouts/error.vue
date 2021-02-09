@@ -21,6 +21,7 @@
 
 <script>
 export default {
+  name: 'LayoutError',
   props: {
     error: {
       type: Object,

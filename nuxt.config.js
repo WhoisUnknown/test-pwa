@@ -46,10 +46,32 @@ export default {
   */
   plugins: [
     '@/plugins/vuex-router-sync',
+    '@/plugins/theme.js',
   ],
+  buildModules: [
+    '@nuxtjs/pwa',
+  ],
+  pwa: {
+    manifest: {
+      lang: 'ru',
+      name: 'PWATestApp',
+      short_name: 'PWA/Nuxt - Test App',
+      display: 'standalone',
+      theme_color: '#555',
+    },
+    workbox: {
+      // dev: true, // or use a global variable to track the current NODE_ENV, etc to determine dev mode
+    },
+  },
   /*
   ** Build configuration
   */
+  /*
+  ** Nuxt.js modules
+  */
+  modules: [
+    'cookie-universal-nuxt',
+  ],
   build: {
     transpile: [
       'lodash-es',
@@ -87,7 +109,7 @@ export default {
       config.resolve.alias['@images'] = path.join(__dirname, 'assets/images/');
       config.resolve.alias['@mixins'] = path.join(__dirname, 'assets/mixins/');
       config.resolve.alias['@modules'] = path.join(__dirname, 'store/');
-      config.resolve.alias.rp = path.join(__dirname, 'components/');
+      config.resolve.alias['@cp'] = path.join(__dirname, 'components/');
       config.resolve.alias.vue = 'vue/dist/vue.common';
     },
     extractCSS: process.env.NODE_ENV === 'production',

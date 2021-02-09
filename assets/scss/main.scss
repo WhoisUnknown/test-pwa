@@ -1,7 +1,8 @@
+
 html, body {
 	box-sizing: border-box;
-	background: #fff;
-	color: #555;
+	background: var(--background-color,#fff);
+	color: var(--body-color, #555);
 	font-family: Gilroy, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, "Fira Sans" , "Droid Sans", "Helvetica Neue", sans-serif;
 }
 

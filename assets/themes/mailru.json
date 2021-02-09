@@ -1,0 +1,9 @@
+{
+  "cssVars":{
+    "body-color": "#333",
+    "background-color": "#eee"
+  },
+  "components":{
+    "card":"SecondCard"
+  }
+}
