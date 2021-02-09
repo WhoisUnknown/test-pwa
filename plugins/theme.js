@@ -10,7 +10,10 @@ export default ({ app, $cookies }, inject) => {
       const config = require('assets/themes/' + theme + '.json');
       resultConfig = config ? merge(defaultConfig, config) : defaultConfig;
     } catch (e) {
-      $cookies.set('theme', 'default');
+      $cookies.set('theme', 'default', {
+        path: '/',
+        maxAge: 60 * 60 * 24 * 365 * 5,
+      });
       console.warn(`Тема "${theme}" не найдена`);
     }
   }

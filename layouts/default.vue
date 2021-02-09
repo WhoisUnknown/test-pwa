@@ -54,7 +54,10 @@ export default {
   watch: {
     theme: {
       handler(newVal) {
-        this.$cookies.set('theme', newVal);
+        this.$cookies.set('theme', newVal, {
+          path: '/',
+          maxAge: 60 * 60 * 24 * 365 * 5,
+        });
         document.location.reload();
       },
     },
