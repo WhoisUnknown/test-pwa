@@ -25,6 +25,7 @@ export default {
       { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
       { namr: 'msapplication-TileColor', content: '#ffffff' },
       { namr: 'theme-color', content: '#ffffff' },
+      { rel: 'stylesheet', type: 'text/css', href: 'https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
     ],
     link: [
